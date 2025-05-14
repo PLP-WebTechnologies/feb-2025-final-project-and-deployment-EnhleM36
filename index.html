@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tasty Bites - Food Blog</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <div class="container header-inner">
+      <h1>Tasty Bites</h1>
+      <nav>
+        <div class="menu-toggle" id="menuToggle">&#9776;</div>
+        <div class="nav-links" id="navLinks">
+          <a href="#home">Home</a>
+          <a href="#recipes">Recipes</a>
+          <a href="#about">About</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Home Section -->
+  <section id="home" class="hero">
+    <div class="container">
+      <h2>Welcome to Tasty Bites!</h2>
+      <button id="welcomeBtn">Click Me!</button>
+      <p id="welcomeText">Your adventure in food starts here...</p>
+    </div>
+  </section>
+
+  <!-- Recipes Section -->
+  <section id="recipes">
+    <div class="container grid">
+      <article class="card">
+        <a href="pasta.html">
+          <img src="Images/pasta.jpg" alt="Pasta" />
+          <h3>Classic Pasta</h3>
+          <p>Easy and delicious Italian pasta recipe.</p>
+          <a href="pasta.html" class="recipe-link">Click here</a>
+        </a>
+      </article>
+      <article class="card">
+        <a href="tacos.html">
+          <img src="Images/tacos.jpg" alt="Tacos" />
+          <h3>Street Tacos</h3>
+          <p>Spicy, savory, and full of flavor — perfect for any meal.</p>
+          <a href="tacos.html" class="recipe-link">Click here</a>
+        </a>
+      </article>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about">
+    <div class="container about">
+      <h2>About Tasty Bites</h2>
+      <p>This blog is dedicated to food lovers around the world! Whether you're a home cook or a foodie on a mission, Tasty Bites has something for you.</p>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      &copy; 2025 Tasty Bites. All rights reserved.
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
