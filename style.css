@@ -16,6 +16,7 @@ body {
   background: var(--light);
   color: var(--dark);
   line-height: 1.6;
+  padding-top: 80px;
 }
 
 .container {
@@ -26,15 +27,25 @@ body {
 
 /* Header */
 header {
-  background: var(--primary);
-  color: white;
-  padding: 1rem 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100px;
+  line-height: 100px;
+  background-color: var(--primary);
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .header-inner {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+header h1 {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
 }
 
 nav a {
@@ -48,6 +59,87 @@ nav a:hover {
   color: #ffd1c1;
 }
 
+/* Header Layout */
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 1rem 0;
+}
+
+.header-inner h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  flex: 1;
+}
+
+/* Navigation */
+.main-nav {
+  display: flex;
+  justify-content: center;
+  flex: 2;
+  gap: 1.5rem;
+}
+
+.main-nav a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.main-nav a:hover {
+  color: #ff7f50;
+}
+
+/* Search Bar */
+.search-box {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  justify-content: flex-end;
+  gap: 0.5rem;
+}
+
+.search-box input[type="text"] {
+  padding: 0.4rem 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  font-size: 1rem;
+}
+.search-box button {
+  background-color: black;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: var(--primary);
+}
+
+
+.search-box button:hover {
+  background-color: #e5643c;
+}
+
+/* Responsive Fix */
+@media (max-width: 768px) {
+  .header-inner {
+    flex-direction: column;
+    align-items: stretch;
+    text-align: center;
+  }
+
+  .main-nav {
+    margin: 1rem 0;
+    justify-content: center;
+  }
+
+  .search-box {
+    justify-content: center;
+  }
+}
+
+
 /* Hero Section */
 .hero {
   background: url('Images/plate.jpg') no-repeat center center/cover;
@@ -60,22 +152,68 @@ nav a:hover {
   font-size: 2.5rem;
   margin-bottom: 1rem;
 }
+.intro-text {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
 
-.hero button {
+.hero-nav-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.hero-link {
+  display: inline-block;
+  padding: 0.6rem 1.2rem;
   background-color: white;
-  color: var(--primary);
-  border: none;
-  padding: 0.75rem 1.5rem;
-  font-size: 1rem;
+  color: #ff7f50;
+  border: 2px solid #ff7f50;
   border-radius: 25px;
-  cursor: pointer;
-  transition: all 0.3s ease;
+  text-decoration: none;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.hero button:hover {
-  background-color: #ffd1c1;
-  color: var(--dark);
+.hero-link:hover {
+  background-color: #ff7f50;
+  color: white;
 }
+
+.home-links {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+}
+
+.home-link-card {
+  display: block;
+  width: 180px;
+  height: 100px;
+  background-color: rgba(255, 255, 255, 0.15);
+  border: 2px solid white;
+  border-radius: 12px;
+  text-decoration: none;
+  color: white;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.home-link-card:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+  transform: scale(1.05);
+}
+
+.link-content {
+  font-size: 1.1rem;
+  font-weight: bold;
+  text-align: center;
+}
+
 
 /* Grid (Recipes Section) */
 .grid {
@@ -91,6 +229,7 @@ nav a:hover {
   overflow: hidden;
   box-shadow: 0 4px 6px rgba(0,0,0,0.1);
   transition: transform 0.3s ease;
+  text-align: center;
 }
 
 .card:hover {
@@ -101,6 +240,10 @@ nav a:hover {
   width: 100%;
   height: 200px;
   object-fit: cover;
+  display: block;
+  margin: 0 auto;
+  max-width: 80%;
+  border-radius: 10px;
 }
 
 .card h3 {
@@ -109,6 +252,66 @@ nav a:hover {
 
 .card p {
   padding: 0 0.75rem 1rem;
+}
+
+.card a {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+/* Vidoe Section */
+
+.video-recipes {
+  text-align: center;
+  padding: 4rem 2rem;
+  background-color: #fff;
+}
+
+.video-recipes h2 {
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+  font-family: 'Playfair Display', serif;
+}
+
+.video-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+.video-card {
+  position: relative;
+  width: 300px;
+  overflow: hidden;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  text-decoration: none;
+}
+
+.video-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.video-card:hover img {
+  transform: scale(1.05);
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.4);
+  color: white;
+  font-weight: bold;
+  padding: 1rem;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  backdrop-filter: blur(4px);
 }
 
 /* About Section */
@@ -125,6 +328,7 @@ footer {
   font-size: 0.9rem;
 }
 
+/* Navigation Responsive */
 .menu-toggle {
   display: none;
   font-size: 2rem;
@@ -159,36 +363,21 @@ footer {
     display: flex;
   }
 }
-.card a {
-  display: block;
-  text-decoration: none;
-  color: inherit;
-}
-.card {
-  text-align: center;
-}
 
-.card img {
-  display: block;
-  margin: 0 auto;
-  max-width: 80%;
-  height: auto;
-  border-radius: 10px;
-}
-
+/* Recipe Link Button */
 .recipe-link {
   display: inline-block;
   margin-top: 0.5rem;
   padding: 0.4rem 0.8rem;
-  background-color: #ffffff;        /* White background */
-  color: #000000;                   /* Black text */
-  border: 2px solid #000000;        /* Black border */
+  background-color: #ffffff;
+  color: #000000;
+  border: 2px solid #000000;
   border-radius: 8px;
   text-decoration: none;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .recipe-link:hover {
-  background-color: #000000;        /* Invert on hover */
-  color: #ffffff;                   /* White text */
+  background-color: #000000;
+  color: #ffffff;
 }

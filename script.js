@@ -34,3 +34,21 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 });
+function filterRecipes() {
+  const input = document.getElementById("searchInput").value.toLowerCase();
+  const cards = document.querySelectorAll(".recipe-card");
+
+  cards.forEach(card => {
+    const title = card.querySelector("h3").textContent.toLowerCase();
+    if (title.includes(input)) {
+      card.style.display = "block";
+    } else {
+      card.style.display = "none";
+    }
+  });
+}
+document.getElementById("searchInput").addEventListener("keyup", function (event) {
+  if (event.key === "Enter") {
+    filterRecipes();
+  }
+});

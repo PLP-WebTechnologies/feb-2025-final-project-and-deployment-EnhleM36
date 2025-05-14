@@ -5,35 +5,50 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Tasty Bites - Food Blog</title>
   <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
 <body>
   <header>
     <div class="container header-inner">
       <h1>Tasty Bites</h1>
-      <nav>
-        <div class="menu-toggle" id="menuToggle">&#9776;</div>
-        <div class="nav-links" id="navLinks">
-          <a href="#home">Home</a>
-          <a href="#recipes">Recipes</a>
-          <a href="#about">About</a>
-        </div>
+      <nav class="main-nav">
+        <a href="#home">Home</a>
+        <a href="#recipes">Recipes</a>
+        <a href="#videos">Videos</a>
+        <a href="#about">About</a>
       </nav>
+
+      <div class="search-box">
+        <input type="text" id="searchInput" placeholder="Search recipes..." />
+        <button type="button" onclick="filterRecipes()">
+          <i class="fas fa-search"></i>
+        </button>
+      </div>
     </div>
   </header>
 
-  <!-- Home Section -->
+ <!-- Home Section -->
   <section id="home" class="hero">
     <div class="container">
       <h2>Welcome to Tasty Bites!</h2>
-      <button id="welcomeBtn">Click Me!</button>
       <p id="welcomeText">Your adventure in food starts here...</p>
+
+      <div class="home-links">
+        <a href="#about" class="home-link-card">
+          <div class="link-content">OUR STORY</div>
+        </a>
+        <a href="#videos" class="home-link-card">
+          <div class="link-content">RECIPE VIDEOS</div>
+        </a>
+      </div>
     </div>
   </section>
 
   <!-- Recipes Section -->
   <section id="recipes">
-    <div class="container grid">
-      <article class="card">
+    <div class="container grid" id="recipeList">
+      <article class="card recipe-card">
         <a href="pasta.html">
           <img src="Images/pasta.jpg" alt="Pasta" />
           <h3>Classic Pasta</h3>
@@ -41,7 +56,7 @@
           <a href="pasta.html" class="recipe-link">Click here</a>
         </a>
       </article>
-      <article class="card">
+      <article class="card recipe-card">
         <a href="tacos.html">
           <img src="Images/tacos.jpg" alt="Tacos" />
           <h3>Street Tacos</h3>
@@ -49,6 +64,27 @@
           <a href="tacos.html" class="recipe-link">Click here</a>
         </a>
       </article>
+    </div>
+  </section>
+
+  <!-- Video Section -->
+  <section id="videos" class="video-recipes">
+    <div class="container">
+      <h2>More Recipe Videos on YouTube</h2>
+      <div class="video-grid">
+        <a href="https://www.youtube.com/results?search_query=thanksgiving+dishes" target="_blank" class="video-card" rel="noopener">
+          <img src="Images/turkey.jpg" alt="Thanksgiving Dishes">
+          <div class="overlay">THANKSGIVING DISHES</div>
+        </a>
+        <a href="https://www.youtube.com/results?search_query=homemade+desserts" target="_blank" class="video-card" rel="noopener">
+          <img src="Images/dessert.jpg" alt="Homemade Desserts">
+          <div class="overlay">HOMEMADE DESSERTS</div>
+        </a>
+        <a href="https://www.youtube.com/results?search_query=sauces+recipes" target="_blank" class="video-card" rel="noopener">
+          <img src="Images/sauces.jpg" alt="101 Sauces">
+          <div class="overlay">101 SAUCES</div>
+        </a>
+      </div>
     </div>
   </section>
 
