@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Our Story - Tasty Bites</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+  <header>
+    <div class="container header-inner">
+      <h1>Tasty Bites</h1>
+      <nav class="main-nav">
+        <a href="index.html">Home</a>
+        <a href="index.html#recipes">Recipes</a>
+        <a href="index.html#videos">Videos</a>
+        <a href="our-story.html" class="active">Our Story</a>
+      </nav>
+
+      <div class="search-box">
+        <input type="text" id="searchInput" placeholder="Search recipes..." />
+        <button type="button" onclick="alert('Search functionality coming soon!')">
+          <i class="fas fa-search"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="story-page">
+    <section class="story-section">
+      <div class="container">
+        <h1 class="page-title">Our Story</h1>
+        
+        <div class="story-content">
+          <div class="story-block">
+            <div class="story-flex">
+              <div class="story-text">
+                <h2>How It All Started</h2>
+                <p>
+                  Tasty Bites began in 2018 in a small kitchen in Johannesburg. What started as a personal collection 
+                  of family recipes quickly grew into a passion for sharing culinary delights with the world.
+                </p>
+                <p>
+                  Our founder, Ntwenhle Mtshali, always believed that food brings people together. After traveling across 
+                  five continents and exploring diverse cuisines, she decided to document and share her culinary adventures.
+                </p>
+              </div>
+              <div class="story-image">
+                <img src="Images/kitchen.jpg" alt="Cooking in a kitchen" class="rounded-img">
+              </div>
+            </div>
+          </div>
+          
+          <div class="story-block">
+            <div class="story-flex story-flex-reverse">
+              <div class="story-text">
+                <h2>Our Mission</h2>
+                <p>
+                  At Tasty Bites, our mission is simple: to make cooking accessible, enjoyable, and delicious for everyone. 
+                  We believe that good food doesn't have to be complicated.
+                </p>
+                <p>
+                  Each recipe we share is carefully tested and simplified, ensuring that even beginners can create 
+                  restaurant-quality dishes at home while still maintaining authentic flavors.
+                </p>
+              </div>
+              <div class="story-image">
+                <img src="Images/mission.jpg" alt="People enjoying a meal together" class="rounded-img">
+              </div>
+            </div>
+          </div>
+          
+          <div class="story-block">
+            <div class="story-flex">
+              <div class="story-text">
+                <h2>Our Community</h2>
+                <p>
+                  Today, Tasty Bites has grown into a vibrant community of food enthusiasts from around the world. 
+                  Our recipes have been featured in numerous publications, and our YouTube channel has over one million subscribers.
+                </p>
+                <p>
+                  We're proud of our diverse community that shares tips, variations, and cooking stories with each other. 
+                  Whether you're a seasoned chef or just starting out, there's a place for you at our table!
+                </p>
+                <a href="index.html" class="btn">Back to Home</a>
+              </div>
+              <div class="story-image">
+                <img src="Images/community.jpg" alt="Community food event" class="rounded-img">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact-section">
+    <div class="container">
+      <div class="contact-container">
+        <div class="contact-info">
+          <h3>Contact Us</h3>
+          <div class="info-item">
+            <i class="fas fa-envelope"></i>
+            <span>contact@tastybites.com</span>
+          </div>
+          <div class="info-item">
+            <i class="fas fa-phone"></i>
+            <span>+27 31 658 01778</span>
+          </div>
+          <div class="info-item">
+            <i class="fas fa-home"></i>
+            <span>65 Houghton Drive, Gauteng, 2199</span>
+          </div>
+        </div>
+
+        <div class="contact-form">
+          <h3>Send Us a Message</h3>
+          <form id="messageForm">
+            <div class="form-group">
+              <input 
+                type="text"
+                placeholder="Your Name"
+                name="name"
+                id="contactName"
+                required
+                class="form-input"
+              />
+            </div>
+            <div class="form-group">
+              <input 
+                type="email"
+                placeholder="Your Email"
+                name="email"
+                id="contactEmail"
+                required
+                class="form-input"
+              />
+            </div>
+            <div class="form-group">
+              <textarea 
+                placeholder="Your Message"
+                name="message"
+                id="contactMessage"
+                required
+                class="form-textarea"
+                rows="4"
+              ></textarea>
+            </div>
+            <button type="submit" class="btn">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>&copy; <span id="currentYear"></span> Tasty Bites. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

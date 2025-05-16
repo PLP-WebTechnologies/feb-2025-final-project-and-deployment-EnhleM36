@@ -2,43 +2,72 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Street Tacos - Tasty Bites</title>
   <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
 <body>
   <header>
     <div class="container header-inner">
-      <h1>Street Tacos</h1>
-      <nav>
-        <a href="index.html">Back to Home</a>
+      <h1>Tasty Bites</h1>
+      <nav class="main-nav">
+        <a href="index.html">Home</a>
+        <a href="index.html#recipes">Recipes</a>
+        <a href="index.html#videos">Videos</a>
+        <a href="our-story.html">Our Story</a>
       </nav>
+
+      <div class="search-box">
+        <input type="text" id="searchInput" placeholder="Search recipes..." />
+        <button type="button" onclick="filterRecipes()">
+          <i class="fas fa-search"></i>
+        </button>
+      </div>
     </div>
   </header>
 
-  <section class="container">
-    <h2>Ingredients</h2>
-    <ul>
-      <li>1/2 lb ground beef</li>
-      <li>Small corn tortillas</li>
-      <li>Onion, cilantro, lime</li>
-      <li>Spices</li>
-    </ul>
+  <section class="recipe-page">
+    <div class="container">
+      <div class="recipe-header">
+        <h2 class="page-title">Street Tacos</h2>
+        <img src="images/tacos.jpg" alt="Street Tacos" class="recipe-image" />
+      </div>
+      
+      <div class="recipe-content">
+        <div class="recipe-section">
+          <h3><i class="fas fa-utensils"></i> Ingredients</h3>
+          <ul class="ingredient-list">
+            <li>1/2 lb ground beef</li>
+            <li>Small corn tortillas</li>
+            <li>Onion, cilantro, lime</li>
+            <li>Spices</li>
+          </ul>
+        </div>
 
-    <h2>Instructions</h2>
-    <ol>
-      <li>Cook beef with spices.</li>
-      <li>Warm tortillas and fill with meat.</li>
-      <li>Top with chopped onion, cilantro, and lime juice.</li>
-    </ol>
+        <div class="recipe-section">
+          <h3><i class="fas fa-list-ol"></i> Instructions</h3>
+          <ol class="instruction-list">
+            <li>Cook beef with spices.</li>
+            <li>Warm tortillas and fill with meat.</li>
+            <li>Top with chopped onion, cilantro, and lime juice.</li>
+          </ol>
+        </div>
+        
+        <div class="back-link">
+          <a href="index.html#recipes" class="btn"><i class="fas fa-arrow-left"></i> Back to Recipes</a>
+        </div>
+      </div>
+    </div>
   </section>
 
   <footer>
     <div class="container">
-      &copy; 2025 Tasty Bites. All rights reserved.
+      <p>&copy; <span id="currentYear"></span> Tasty Bites. All rights reserved.</p>
     </div>
   </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
-<!--     </div>
- -->
